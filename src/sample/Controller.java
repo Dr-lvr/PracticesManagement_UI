@@ -72,6 +72,7 @@ public class Controller {
 		alimentazioneOut.setText("");
 	}
 	public void ReSubmit(ActionEvent actionEvent){
+
 		this.Submit(actionEvent);
 	}
 	public void Modify(ActionEvent actionEvent){

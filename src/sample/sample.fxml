@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="904.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Separator layoutX="299.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="1.0" />
-      <Label layoutX="14.0" layoutY="14.0" text="Pratica In">
+      <Label layoutX="12.0" layoutY="13.0" text="Pratica In">
          <font>
             <Font size="22.0" />
          </font></Label>
-       <Label layoutX="14.0" layoutY="59.0" text="Proprietario" />
+       <Label layoutX="13.0" layoutY="59.0" text="Proprietario" />
        <TextField fx:id="proprietario" layoutX="12.0" layoutY="81.0" prefHeight="29.0" prefWidth="275.0" />
        <Label layoutX="14.0" layoutY="127.0" text="Targa" />
        <TextField fx:id="targa" layoutX="67.0" layoutY="122.0" prefHeight="29.0" prefWidth="219.0" />
-       <Label layoutX="8.0" layoutY="172.0" text="Anno di immatricolazione" />
+       <Label layoutX="13.0" layoutY="172.0" text="Anno di immatricolazione" />
        <TextField fx:id="immatricolazione" layoutX="167.0" layoutY="167.0" prefHeight="29.0" prefWidth="118.0" />
-       <Label layoutX="8.0" layoutY="200.0" text="Alimentazione" />
+       <Label layoutX="13.0" layoutY="200.0" text="Alimentazione" />
        <RadioButton fx:id="benzina" layoutX="12.0" layoutY="226.0" mnemonicParsing="false" text="Benzina" />
        <RadioButton fx:id="diesel" layoutX="97.0" layoutY="226.0" mnemonicParsing="false" text="Diesel" />
-       <RadioButton fx:id="elettrica" layoutX="172.0" layoutY="226.0" mnemonicParsing="false" text="Elettrica" />
+       <RadioButton fx:id="elettrica" layoutX="180.0" layoutY="226.0" mnemonicParsing="false" text="Elettrica" />
        <Label layoutX="9.0" layoutY="253.0" text="Accessori" />
        <TextArea layoutX="11.0" layoutY="275.0" prefHeight="61.0" prefWidth="275.0" />
        <Button layoutX="14.0" layoutY="348.0" mnemonicParsing="false" onAction="#Submit" prefHeight="29.0" prefWidth="118.0" text="Submit" />
        <Button layoutX="168.0" layoutY="348.0" mnemonicParsing="false" onAction="#Reset" prefHeight="29.0" prefWidth="118.0" text="Reset" />
 
-       <Label layoutX="314.0" layoutY="14.0" text="Pratica Out">
+       <Label layoutX="314.0" layoutY="13.0" text="Pratica Out">
            <font>
                <Font size="22.0" />
            </font></Label>
@@ -37,15 +39,41 @@
        <Label layoutX="9.0" layoutY="253.0" text="Accessori" />
 
        <TextField fx:id="proprietarioOut" layoutX="315.0" layoutY="81.0" prefHeight="29.0" prefWidth="275.0" />
-       <TextField fx:id="targaOut" layoutX="367.0" layoutY="122.0" prefHeight="29.0" prefWidth="219.0" />
-       <TextField fx:id="alimentazioneOut" layoutX="315.0" layoutY="221.0" prefHeight="29.0" prefWidth="219.0" />
-       <TextField fx:id="immatricolazioneOut" layoutX="466.0" layoutY="167.0" prefHeight="29.0" prefWidth="118.0" />
+       <TextField fx:id="targaOut" layoutX="368.0" layoutY="122.0" prefHeight="29.0" prefWidth="219.0" />
+       <TextField fx:id="alimentazioneOut" layoutX="315.0" layoutY="221.0" prefHeight="29.0" prefWidth="275.0" />
+       <TextField fx:id="immatricolazioneOut" layoutX="465.0" layoutY="167.0" prefHeight="29.0" prefWidth="118.0" />
        <TextArea layoutX="315.0" layoutY="275.0" prefHeight="61.0" prefWidth="275.0" />
 
        <Button layoutX="314.0" layoutY="348.0" mnemonicParsing="false" onAction="#Get" prefHeight="29.0" prefWidth="70.0" text="Get" />
        <Button layoutX="510.0" layoutY="348.0" mnemonicParsing="false" onAction="#Discard" prefHeight="29.0" prefWidth="70.0" text="Discard" />
        <Button layoutX="407.0" layoutY="348.0" mnemonicParsing="false" onAction="#ReSubmit" prefHeight="29.0" prefWidth="82.0" text="ReSubmit" />
-       <Button layoutX="477.0" layoutY="32.0" mnemonicParsing="false" onAction="#Modify" prefHeight="29.0" prefWidth="90.0" text="Modify" />
+       <Button layoutX="478.0" layoutY="33.0" mnemonicParsing="false" onAction="#Modify" prefHeight="29.0" prefWidth="108.0" text="Modify" />
+      <Separator layoutX="600.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="6.0" />
+      <Label layoutX="615.0" layoutY="59.0" prefHeight="19.0" prefWidth="90.0" text="Import Path" />
+      <TextField layoutX="615.0" layoutY="81.0" prefHeight="29.0" prefWidth="275.0" />
+      <Button layoutX="833.0" layoutY="47.0" mnemonicParsing="false" text="Import" />
+      <Label layoutX="615.0" layoutY="127.0" text="Export Path" />
+      <TextField layoutX="615.0" layoutY="146.0" prefHeight="29.0" prefWidth="275.0" />
+      <Button layoutX="833.0" layoutY="113.0" mnemonicParsing="false" text="Export" />
+      <Label layoutX="615.0" layoutY="14.0" text="File Manager">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <AreaChart layoutX="615.0" layoutY="237.0" prefHeight="144.0" prefWidth="275.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Label layoutX="617.0" layoutY="194.0" text="Activity">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="29.0" fitWidth="33.0" layoutX="255.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
 
 
    </children>
