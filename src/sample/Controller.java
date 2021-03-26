@@ -16,14 +16,12 @@ public class Controller {
 	@FXML private TextField targaOut;
 	@FXML private TextField immatricolazioneOut;
 	@FXML private TextField alimentazioneOut;
-	@FXML private TextArea Accesso;
+	@FXML private TextField importText;
+	@FXML private TextField exportText;
+
 	@FXML private RadioButton benzina;
 	@FXML private RadioButton diesel;
 	@FXML private RadioButton elettrica;
-	@FXML private Button sub;
-	@FXML private Button res;
-
-	@FXML private Label out;
 
 	private Queue<Pratica> pratiche;
 	//costruttore che istanzia il Model
@@ -76,5 +74,10 @@ public class Controller {
 		this.Submit(actionEvent);
 	}
 	public void Modify(ActionEvent actionEvent){
+	}
+	public void onImport(ActionEvent actionEvent){
+
+	}
+	public void onExport(ActionEvent actionEvent){
 	}
 }

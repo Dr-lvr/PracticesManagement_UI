@@ -48,18 +48,22 @@
        <Button layoutX="510.0" layoutY="348.0" mnemonicParsing="false" onAction="#Discard" prefHeight="29.0" prefWidth="70.0" text="Discard" />
        <Button layoutX="407.0" layoutY="348.0" mnemonicParsing="false" onAction="#ReSubmit" prefHeight="29.0" prefWidth="82.0" text="ReSubmit" />
        <Button layoutX="478.0" layoutY="33.0" mnemonicParsing="false" onAction="#Modify" prefHeight="29.0" prefWidth="108.0" text="Modify" />
+
       <Separator layoutX="600.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="6.0" />
       <Label layoutX="615.0" layoutY="59.0" prefHeight="19.0" prefWidth="90.0" text="Import Path" />
-      <TextField layoutX="615.0" layoutY="81.0" prefHeight="29.0" prefWidth="275.0" />
-      <Button layoutX="833.0" layoutY="47.0" mnemonicParsing="false" text="Import" />
+      <TextField fx:id="importText" layoutX="615.0" layoutY="81.0" prefHeight="29.0" prefWidth="275.0" />
+      <Button onAction="#onImport" layoutX="833.0" layoutY="47.0" mnemonicParsing="false" text="Import" />
+
       <Label layoutX="615.0" layoutY="127.0" text="Export Path" />
-      <TextField layoutX="615.0" layoutY="146.0" prefHeight="29.0" prefWidth="275.0" />
-      <Button layoutX="833.0" layoutY="113.0" mnemonicParsing="false" text="Export" />
+      <TextField fx:id="exportText" layoutX="615.0" layoutY="146.0" prefHeight="29.0" prefWidth="275.0" />
+      <Button onAction="#onExport" layoutX="833.0" layoutY="113.0" mnemonicParsing="false" text="Export" />
+
       <Label layoutX="615.0" layoutY="14.0" text="File Manager">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
+
       <AreaChart layoutX="616.0" layoutY="237.0" prefHeight="144.0" prefWidth="275.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
@@ -68,6 +72,7 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </AreaChart>
+
       <Label layoutX="617.0" layoutY="194.0" text="Activity">
          <font>
             <Font size="22.0" />
