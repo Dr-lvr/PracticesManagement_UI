@@ -64,7 +64,7 @@
          </font>
       </Label>
 
-      <AreaChart layoutX="616.0" layoutY="237.0" prefHeight="144.0" prefWidth="275.0">
+      <AreaChart fx:id="areaChart" layoutX="616.0" layoutY="237.0" prefHeight="144.0" prefWidth="275.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

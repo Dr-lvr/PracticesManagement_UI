@@ -2,6 +2,10 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.chart.AreaChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
@@ -26,6 +30,7 @@ public class Controller {
 	private Queue<Pratica> pratiche;
 	//costruttore che istanzia il Model
 	public Controller(){
+
 		pratiche = new Queue<Pratica>();
 	}
 	public void Submit(ActionEvent actionEvent){
