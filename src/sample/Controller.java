@@ -10,6 +10,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class Controller {
 	//componenti dell'interfaccia come attributi della classe
@@ -28,10 +29,24 @@ public class Controller {
 	@FXML private RadioButton elettrica;
 
 	private Queue<Pratica> pratiche;
-	//costruttore che istanzia il Model
-	public Controller(){
 
+	public Controller(){
 		pratiche = new Queue<Pratica>();
+	}
+	public void onImport(ActionEvent actionEvent){
+		FileManagement.read(importText.getText());
+	}
+	public void onExport(ActionEvent actionEvent){
+		try{
+			FileManagement.writeFile(exportText.getText());
+		}catch(IOException e){
+			try{
+				FileManagement.createFile(exportText.getText());
+				FileManagement.writeFile(exportText.getText());
+			}catch(IOException ioException){
+				ioException.printStackTrace();
+			}
+		}
 	}
 	public void Submit(ActionEvent actionEvent){
 		pratiche.Enqueue(new Pratica(
@@ -79,10 +94,5 @@ public class Controller {
 		this.Submit(actionEvent);
 	}
 	public void Modify(ActionEvent actionEvent){
-	}
-	public void onImport(ActionEvent actionEvent){
-
-	}
-	public void onExport(ActionEvent actionEvent){
 	}
 }

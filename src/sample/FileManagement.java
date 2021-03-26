@@ -7,48 +7,32 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 
 public class FileManagement{
-	public class CreateFile{
-		public void createFile(){
-			try{
-				File myObj=new File("filename.txt");
-				if(myObj.createNewFile()){
-					System.out.println("File created: "+myObj.getName());
-				}else{
-					System.out.println("File already exists.");
-				}
-			}catch(IOException e){
-				System.out.println("An error occurred.");
-				e.printStackTrace();
-			}
+	public static void createFile(String str) throws IOException{
+		File myObj=new File(str);
+		if(myObj.createNewFile()){
+			System.out.println("File created: "+myObj.getName());
+		}else{
+			System.out.println("File already exists.");
 		}
 	}
-	public class WriteToFile {
-		public void writeFile() {
-			try {
-				FileWriter myWriter = new FileWriter("filename.txt");
-				myWriter.write("Files in Java might be tricky, but it is fun enough!");
-				myWriter.close();
-				System.out.println("Successfully wrote to the file.");
-			} catch (IOException e) {
-				System.out.println("An error occurred.");
-				e.printStackTrace();
-			}
-		}
+	public static void writeFile(String str) throws IOException{
+		FileWriter myWriter=new FileWriter(str);
+		myWriter.write("Files in Java might be tricky, but it is fun enough!");
+		myWriter.close();
+		System.out.println("Successfully wrote to the file.");
 	}
-	public class ReadFile {
-		public void read() {
-			try {
-				File myObj = new File("filename.txt");
-				Scanner myReader = new Scanner(myObj);
-				while (myReader.hasNextLine()) {
-					String data = myReader.nextLine();
-					System.out.println(data);
-				}
-				myReader.close();
-			} catch (FileNotFoundException e) {
-				System.out.println("An error occurred.");
-				e.printStackTrace();
+	public static void read(String str){
+		try{
+			File myObj=new File(str);
+			Scanner myReader=new Scanner(myObj);
+			while(myReader.hasNextLine()){
+				String data=myReader.nextLine();
+				System.out.println(data);
 			}
+			myReader.close();
+		}catch(FileNotFoundException e){
+			System.out.println("An error occurred.");
+			e.printStackTrace();
 		}
 	}
 }
