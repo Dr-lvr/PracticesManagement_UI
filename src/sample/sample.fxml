@@ -52,11 +52,11 @@
       <Separator layoutX="600.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="6.0" />
       <Label layoutX="615.0" layoutY="59.0" prefHeight="19.0" prefWidth="90.0" text="Import Path" />
       <TextField fx:id="importText" layoutX="615.0" layoutY="81.0" prefHeight="29.0" prefWidth="275.0" />
-      <Button onAction="#onImport" layoutX="833.0" layoutY="47.0" mnemonicParsing="false" text="Import" />
+      <Button layoutX="832.0" layoutY="48.0" mnemonicParsing="false" onAction="#onImport" text="Import" />
 
       <Label layoutX="615.0" layoutY="127.0" text="Export Path" />
       <TextField fx:id="exportText" layoutX="615.0" layoutY="146.0" prefHeight="29.0" prefWidth="275.0" />
-      <Button onAction="#onExport" layoutX="833.0" layoutY="113.0" mnemonicParsing="false" text="Export" />
+      <Button layoutX="833.0" layoutY="113.0" mnemonicParsing="false" onAction="#onExport" text="Export" />
 
       <Label layoutX="615.0" layoutY="14.0" text="File Manager">
          <font>
@@ -79,6 +79,8 @@
          </font>
       </Label>
       <ImageView fitHeight="29.0" fitWidth="33.0" layoutX="255.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="753.0" layoutY="196.0" mnemonicParsing="false" text="Undo" />
+      <Button layoutX="839.0" layoutY="195.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="50.0" text="Redo" />
 
 
    </children>
