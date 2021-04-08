@@ -20,11 +20,16 @@
        <Label layoutX="13.0" layoutY="172.0" text="Anno di immatricolazione" />
        <TextField fx:id="immatricolazione" layoutX="167.0" layoutY="167.0" prefHeight="29.0" prefWidth="118.0" />
        <Label layoutX="13.0" layoutY="200.0" text="Alimentazione" />
-       <RadioButton fx:id="benzina" layoutX="12.0" layoutY="226.0" mnemonicParsing="false" text="Benzina" />
-       <RadioButton fx:id="diesel" layoutX="97.0" layoutY="226.0" mnemonicParsing="false" text="Diesel" />
-       <RadioButton fx:id="elettrica" layoutX="180.0" layoutY="226.0" mnemonicParsing="false" text="Elettrica" />
-       <Label layoutX="9.0" layoutY="253.0" text="Accessori" />
-       <TextArea layoutX="11.0" layoutY="275.0" prefHeight="61.0" prefWidth="275.0" />
+       <RadioButton fx:id="benzina" layoutX="12.0" layoutY="226.0" mnemonicParsing="false" selected="true" text="Benzina" toggleGroup="$Alimentazione">
+         <toggleGroup>
+            <ToggleGroup fx:id="Alimentazione" />
+         </toggleGroup></RadioButton>
+       <RadioButton fx:id="diesel" layoutX="97.0" layoutY="226.0" mnemonicParsing="false" selected="true" text="Diesel" toggleGroup="$Alimentazione" />
+       <RadioButton fx:id="elettrica" layoutX="180.0" layoutY="226.0" mnemonicParsing="false" selected="true" text="Elettrica" toggleGroup="$Alimentazione" />
+       <Label  layoutX="9.0" layoutY="253.0" text="Accessori" />
+
+       <TextField fx:id="accessori" layoutX="11.0" layoutY="275.0" prefHeight="61.0" prefWidth="275.0" />
+
        <Button layoutX="14.0" layoutY="348.0" mnemonicParsing="false" onAction="#Submit" prefHeight="29.0" prefWidth="118.0" text="Submit" />
        <Button layoutX="168.0" layoutY="348.0" mnemonicParsing="false" onAction="#Reset" prefHeight="29.0" prefWidth="118.0" text="Reset" />
 
@@ -42,7 +47,8 @@
        <TextField fx:id="targaOut" layoutX="368.0" layoutY="122.0" prefHeight="29.0" prefWidth="219.0" />
        <TextField fx:id="alimentazioneOut" layoutX="315.0" layoutY="221.0" prefHeight="29.0" prefWidth="275.0" />
        <TextField fx:id="immatricolazioneOut" layoutX="465.0" layoutY="167.0" prefHeight="29.0" prefWidth="118.0" />
-       <TextArea layoutX="315.0" layoutY="275.0" prefHeight="61.0" prefWidth="275.0" />
+
+       <TextField fx:id="accessori2" layoutX="315.0" layoutY="275.0" prefHeight="61.0" prefWidth="275.0" />
 
        <Button layoutX="314.0" layoutY="348.0" mnemonicParsing="false" onAction="#Get" prefHeight="29.0" prefWidth="70.0" text="Get" />
        <Button layoutX="510.0" layoutY="348.0" mnemonicParsing="false" onAction="#Discard" prefHeight="29.0" prefWidth="70.0" text="Discard" />
@@ -81,7 +87,6 @@
       <ImageView fitHeight="29.0" fitWidth="33.0" layoutX="255.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="753.0" layoutY="196.0" mnemonicParsing="false" text="Undo" />
       <Button layoutX="839.0" layoutY="195.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="50.0" text="Redo" />
-
-
+      <Label layoutX="315.0" layoutY="253.0" text="Accessori" />
    </children>
 </AnchorPane>

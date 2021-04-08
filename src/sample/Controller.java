@@ -24,6 +24,9 @@ public class Controller {
 	@FXML private TextField importText;
 	@FXML private TextField exportText;
 
+	@FXML private TextField accessori;
+	@FXML private TextField accessori2;
+
 	@FXML private RadioButton benzina;
 	@FXML private RadioButton diesel;
 	@FXML private RadioButton elettrica;
@@ -53,6 +56,7 @@ public class Controller {
 				proprietario.getText(),
 				targa.getText(),
 				immatricolazione.getText(),
+				accessori.getText(),
 				benzina.isSelected(),
 				diesel.isSelected(),
 				elettrica.isSelected()
@@ -60,6 +64,7 @@ public class Controller {
 		proprietario.setText("");
 		targa.setText("");
 		immatricolazione.setText("");
+		accessori.setText("");
 		benzina.setSelected(false);
 		diesel.setSelected(false);
 		elettrica.setSelected(false);
@@ -68,6 +73,7 @@ public class Controller {
 		proprietario.setText("");
 		targa.setText("");
 		immatricolazione.setText("");
+		accessori.setText("");
 		benzina.setSelected(false);
 		diesel.setSelected(false);
 		elettrica.setSelected(false);
@@ -78,6 +84,7 @@ public class Controller {
 			proprietarioOut.setText(tmp.getProprietario());
 			targaOut.setText(tmp.getTarga());
 			immatricolazioneOut.setText(tmp.getImmatricolazione());
+			accessori2.setText(tmp.getAccessori());
 			alimentazioneOut.setText(tmp.getAlimentazione());
 		}catch(Exception e){
 			e.printStackTrace();
@@ -87,6 +94,7 @@ public class Controller {
 		proprietarioOut.setText("");
 		targaOut.setText("");
 		immatricolazioneOut.setText("");
+		accessori.setText("");
 		alimentazioneOut.setText("");
 	}
 	public void ReSubmit(ActionEvent actionEvent){
